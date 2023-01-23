@@ -1,0 +1,72 @@
+.faq {
+      margin: 0 auto;
+      text-align: center;
+
+      &-area {
+            @media only screen and (max-width: $bp-large) {
+                  margin: 0 2rem;
+            }
+      }
+
+      &__title {
+            font-size: 3.6rem;
+            color: $color-text-light;
+      }
+
+      &__details {
+            font-weight: 600;
+            color: $color-text;
+            font-size: 1.8rem;
+            margin-bottom: 4rem;
+      }
+}
+
+.accordion-toggle {
+      display: flex;
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 3rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      padding: 0.1rem;
+      text-decoration: none;
+      color: #fff;
+      padding: 2rem 3.6rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 100;
+      background-color: $color-text-light;
+}
+
+.accordion--light {
+      color: $color-text-light;
+      background-color: rgba($color-text-light, 0.2);
+}
+
+.accordion-toggle:first-child {
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+}
+.accordion-toggle-last {
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+}
+
+.accordion-content {
+      display: none;
+      font-size: 1.6rem;
+      color: $color-text;
+      padding: 1.6rem;
+}
+
+.accordion-content.active {
+      display: block;
+}
+
+.accordion-arrow.active {
+      transform: rotate(180deg);
+}

@@ -1,0 +1,122 @@
+#team {
+      position: relative;
+      background-color: $color-bg;
+
+      &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-image: url(../img/scratch.png);
+            background-position: right;
+            z-index: 0;
+            background-repeat: no-repeat;
+           
+            background-size: 20%;
+            position: absolute;
+
+      }
+
+      &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-image: url(../img/scratch-2.png);
+            background-position: left;
+            z-index: 0;
+            background-repeat: no-repeat;
+           
+            background-size: 20%;
+            position: absolute;
+            top: 0;
+            left: -20rem;
+
+      }
+}
+
+.team {
+      display: flex;
+      justify-content: space-between;
+
+      @media only screen and (max-width: 1110px) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 40rem);
+            align-items: center;
+            justify-content: center;
+      }
+
+      @media only screen and (max-width: $bp-large) {
+            grid-template-columns: repeat(auto-fit, 35rem);
+      }
+
+
+      &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-image: url(../img/big-bone.svg);
+            background-position: center;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-size: 75%;
+            position: absolute;
+            top: 0rem;
+            left: 0;
+
+            @media only screen and (max-width: 1110px) {
+                  display: none;
+            }
+
+      }
+      &__card {
+            transition: all .2s;
+            position: relative;
+            z-index: 5;
+
+            @media only screen and (max-width: 1110px) {
+                  justify-self: center;
+            }
+
+
+
+            &--img {
+                  max-width: 28.6rem;
+                  transform: rotate(-30deg);
+            }
+
+            &--nft {
+                  max-width: 24rem;
+                  position: absolute;
+                  top: 6rem;
+                  left: 2rem;
+                  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, transparent 100%);
+                  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 55%, transparent 90%);
+            }
+      }
+
+      &__card:hover {
+            transform: translateY(-3px);
+            
+      }
+
+      &__title {
+            font-size: 3.6rem;
+            font-weight: 600;
+            color: $color-text-o;
+      }
+
+      &__subtitle {
+            font-size: 2.4rem;
+            font-weight: 300;
+            color: $color-text-o;
+      }
+
+      &__paragraph {
+            margin-top: 6rem;
+            font-size: 2.4rem;
+            color: $color-text;
+            line-height: 1.4;
+      }
+}

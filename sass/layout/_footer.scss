@@ -1,0 +1,111 @@
+#footer {
+      margin-top: 10rem;
+      position: relative;
+
+      &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-image: linear-gradient(to bottom, rgba($color-bg, 1), rgba($color-bg, 0.5), rgba($color-bg, 0.6)),
+                  url(../img/footer-bg.png);
+            background-position: center;
+            z-index: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+      }
+}
+
+.footer {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      line-height: 1;
+      width: 100%;
+
+      @media only screen and (max-width: $bp-large) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+      }
+
+      &__img {
+            width: 38.6rem;
+            position: relative;
+            margin-left: 40rem;
+
+            @media only screen and (max-width: $bp-large) {
+                  margin: 0;
+                  max-width: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: flex-end;
+            }
+      }
+
+      &__nft {
+            display: inline-block;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            margin-right: -10rem;
+            position: relative;
+            margin-bottom: -0.2rem;
+
+            
+
+            @media only screen and (max-width: $bp-large) {
+                  margin: 0;
+            }
+            @media only screen and (max-width: $bp-medium) {
+                  width: 50%;
+                  height: 50%;
+                  bottom: 0;
+                  margin-bottom: 0;
+            }
+      }
+
+      &__tab {
+            position: relative;
+            z-index: 10;
+            width: 60rem;
+            background-color: $color-bg;
+            border-top-left-radius: 10rem;
+            border-top-right-radius: 10rem;
+            display: flex;
+            margin-right: 0;
+            align-items: center;
+
+            @media only screen and (max-width: $bp-large) {
+                  max-width: 50rem;
+                  justify-content: center;
+                  align-items: center;
+            }
+      }
+
+      &__links {
+            padding: 1rem;
+            margin-left: auto;
+            margin-right: 3rem;
+
+            @media only screen and (max-width: $bp-large) {
+                  margin-left: 0;
+                  justify-content: center;
+                  margin-right: 0;
+            }
+      }
+
+      &__link {
+            svg {
+                  transform: scale(1.4);
+                  margin: 1rem;
+
+                  @media only screen and (max-width: $bp-medium) {
+                        transform: scale();
+                  }
+            }
+      }
+}

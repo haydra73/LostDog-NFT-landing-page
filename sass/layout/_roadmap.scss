@@ -1,0 +1,239 @@
+#roadmap {
+      background-color: $color-bg;
+}
+
+.roadmap {
+      position: relative;
+      z-index: 2;
+
+      &__img {
+            margin-top: -50rem;
+            position: relative;
+            z-index: 4;
+
+            @media only screen and (max-width: 1500px) {
+                  margin-top: -55rem;
+            }
+            @media only screen and (max-width: $bp-largest) {
+                  margin-top: -58rem;
+            }
+            @media only screen and (max-width: 1110px) {
+                  display: none;
+                  
+            }
+      }
+
+      @media only screen and (max-width: 1110px) {
+
+            &::before {
+                  content: '';
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: 3;
+                  background-image: linear-gradient(rgba($color-bg, .9),rgba($color-bg, .1)), url(..img/roadmap.pvg) ;
+                  background-image: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+
+
+            }
+
+            div {
+                  z-index: 10;
+                  padding-right: 1rem;
+            }
+      }
+}
+
+.phase-1 {
+      position: absolute;
+      top: 21%;
+      left: 0;
+      @media only screen and (max-width: 1500px) {
+            top: 23%;
+      }
+      @media only screen and (max-width: 1110px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            text-align: left;
+            padding-left: 10rem;
+            margin: 4rem auto;
+
+            &::after {
+                  content: " ";
+                  display: block;
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  background-image: url(../img/vertical-bone.png);
+                  background-position: left 0 top 0;
+                  background-size: 7%;
+                  background-repeat: no-repeat;
+                  top: 0;
+                  left: 0rem;
+            }
+      }
+
+      @media only screen and (max-width: 500px) {
+            margin-left: 4rem;
+      }
+}
+.phase-2 {
+      position: absolute;
+      top: -15%;
+      left: 40%;
+
+      @media only screen and (max-width: 1500px) {
+            top: 0;
+            left: 44%;
+      }
+
+      @media only screen and (max-width: 1110px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            text-align: left;
+            display: none;
+
+            &::after {
+                  content: " ";
+                  display: block;
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  background-image: url(../img/vertical-bone.png);
+                  background-position: left 0 top 0;
+                  background-size: 7%;
+                  background-repeat: no-repeat;
+                  top: 0;
+                  left: 0rem;
+            }
+      }
+}
+
+.phase-2--sm {
+      position: absolute;
+      top: -15%;
+      left: 40%;
+      display: none;
+ 
+      @media only screen and (max-width: 1500px) {
+            top: 0;
+            left: 44%;
+      }
+
+      @media only screen and (max-width: 1110px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: inline-flex;
+            flex-direction: column;
+            padding: 0 10rem;
+            margin: 4rem 0;
+            
+
+            &::after {
+                  content: " ";
+                  display: block;
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  background-image: url(../img/vertical-bone.png);
+                  background-position: left 0 top 0;
+                  background-size: 6%;
+                  background-repeat: no-repeat;
+                  top: 0;
+                  left: 0rem;
+            }
+      }
+      @media only screen and (max-width: 500px) {
+            margin-left: 4rem;
+      }
+}
+.para-1 {
+      max-width: 50rem;
+      position: absolute;
+      top: 48%;
+      left: 31%;
+      @media only screen and (max-width: 1500px) {
+            left: 44%;
+            top: 53%;
+      }
+      @media only screen and (max-width: 1110px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            text-align: left;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            margin-left: auto;
+            padding-left: 6rem;
+
+            &::after {
+                  content: " ";
+                  display: block;
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  background-image: url(../img/vertical-bone.png);
+                  background-position: left 0 top 0;
+                  background-size: 7%;
+                  background-repeat: no-repeat;
+                  top: 0;
+                  left: 0rem;
+            }
+      }
+      @media only screen and (max-width: 500px) {
+            margin-left: 4rem;
+            padding-left: 10rem;
+      }
+}
+.para-2 {
+      max-width: 40rem;
+      position: absolute;
+      top: 77%;
+      left: 5%;
+
+      @media only screen and (max-width: 1500px) {
+            top: 78%;
+            left: 12%;
+      }
+      @media only screen and (max-width: 1110px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            text-align: left;
+            margin: 4rem auto;
+            padding-left: 6rem;
+
+            &::after {
+                  content: " ";
+                  display: block;
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  background-image: url(../img/vertical-bone.png);
+                  background-position: left 0 top 0;
+                  background-size: 7%;
+                  background-repeat: no-repeat;
+                  top: 0;
+                  left: 0rem;
+            }
+      }
+
+      p {
+            @media only screen and (max-width: 1110px) {
+                  text-align: left;
+            }
+      }
+
+      @media only screen and (max-width: 500px) {
+            margin-left: 4rem;
+            padding-left: 10rem;
+      }
+}

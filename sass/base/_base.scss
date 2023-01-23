@@ -1,0 +1,138 @@
+// COLOR VARIABLES
+$color-text: #3D3D3D;
+$color-text-light: #75A898;
+$color-text-dark: #25453B;
+$color-text-o: #E28945;
+
+$color-bg: #FAF5EF;
+
+
+
+// reponsive breakpoints
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 35em; //600px
+
+// FONT VARIABLES
+$font-primary: 'Gilroy', san-serif;
+$font-secondary: 'Milky';
+
+*,
+*::after,
+*::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+}
+
+html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+      transition: all .2s;
+      scroll-behavior: smooth;
+
+
+      @media only screen and (max-width: 1500px) {
+            font-size: 52%;
+            
+      }
+      @media only screen and (max-width: $bp-largest) {
+            font-size: 50%;
+            
+      }
+      @media only screen and (max-width: $bp-small) {
+            font-size: 38%;
+            
+      }
+}
+
+body {
+      font-family: $font-primary;
+      color: $color-text;
+      font-weight: normal;
+      line-height: 1.6;
+      background-color: $color-bg;
+      position: relative;
+
+      
+}
+
+
+
+.contain-free {
+      max-width: 100%;
+}
+
+.contain-180 {
+      max-width: 180rem;
+      margin: 0 auto ;
+      padding: 0 2rem;
+
+
+}
+
+.contain-135-p-3 {
+        max-width: 135rem;
+        margin: 0 auto;
+        padding: 0 3rem;
+}
+.contain-135-p-1 {
+        max-width: 135rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+}
+.contain-135 {
+        max-width: 135rem;
+        margin: 0 auto;
+        
+}
+
+.contain-118 {
+      max-width: 118rem;
+      margin: 0 auto;
+      
+}
+
+.text-align-right {
+      text-align: right;
+}
+
+.text-align-center {
+      text-align: center;
+}
+
+.mb-large{
+      margin-bottom: 6rem;
+}
+.mb-medium{
+      margin-bottom: 4rem;
+}
+.mb-small{
+      margin-bottom: 2rem;
+}
+
+
+::selection {
+      background-color: $color-text;
+      color: white;
+}
+
+
+::-webkit-scrollbar {
+      width: 4px;
+}
+
+
+::-webkit-scrollbar-track {
+      border-radius: 5px;
+      box-shadow: inset 0 0 5px rgba(#000, .25);
+}
+
+::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: $color-text-light;
+      transition: all .2s;
+}
+
+

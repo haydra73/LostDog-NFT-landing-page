@@ -1,0 +1,134 @@
+.main-countdown {
+      margin-top: -10rem;
+      width: 100%;
+      display: flex;
+
+      @media only screen and (max-width: $bp-largest) {
+            margin-top: -2rem;
+      }
+
+      @media only screen and (max-width: $bp-largest) {
+           justify-content: center;
+      }
+
+      
+      
+}
+
+.home__buy {
+      margin-left: auto;
+      z-index: 4000;
+      position: relative;
+      font-family: $font-secondary;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50rem;
+      right: 0;
+      top: 15%;
+      margin-right: -4rem;
+
+
+
+      @media only screen and (max-width: $bp-largest) {
+            margin: 0;
+           
+      }
+      @media only screen and (max-width: $bp-large) {
+            width: 35rem;
+           
+      }
+
+   
+
+      &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-image: url(../img/cloud.svg);
+            background-position: center;
+            z-index: -4;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+      }
+}
+.countdown {
+      color: #333;
+      margin-top: 6rem;
+      margin-right: -5rem;
+      text-align: center;
+
+      @media only screen and (max-width: $bp-large) {
+            
+      }
+}
+
+li {
+      display: inline-block;
+      font-size: 2.4rem;
+      list-style-type: none;
+      padding: 0.5rem;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      @media only screen and (max-width: $bp-large) {
+            font-size: 2rem;
+            margin-left: 0;
+      }
+}
+
+li span {
+      display: block;
+      font-size: 7.2rem;
+      font-weight: 700;
+      margin-left: 2rem;
+      margin-bottom: -3rem;
+
+      @media only screen and (max-width: $bp-large) {
+            font-size: 5rem;
+            margin-left: 0;
+            margin-bottom: -2rem;
+      }
+}
+.buy-button {
+      padding: 3rem 6rem;
+      font-size: 3.2rem;
+      font-weight: 600;
+      font-family: $font-secondary;
+      color: $color-text;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: transparent;
+      position: relative;
+      margin-top: 0rem;
+      margin-right: -5rem;
+
+      @media only screen and (max-width: $bp-large) {
+            margin-right: 1rem;
+            margin-top: 0rem;
+      }
+
+      &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-image: url(../img/short-bone.svg);
+            background-position: center;
+            z-index: -4;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+      }
+}
+
+.buy-button:active {
+      transform: translateY(2px);
+}

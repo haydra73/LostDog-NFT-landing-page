@@ -1,0 +1,240 @@
+#popup {
+      transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      opacity: 0;
+      display: none;
+}
+
+#popupOut {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-text-o, 0.5);
+      backdrop-filter: blur(10px);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9000;
+}
+
+.popup {
+      
+      &__wrapper {
+            height: 100vh;
+      }
+
+      &__content {
+            width: 76.5rem;
+            height: 76.5rem;
+            background-image: url(../img/dog-house.svg);
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            z-index: 120000;
+
+            @media only screen and (max-width: 500px) {
+                  width: 55rem;
+                  height: 55rem;
+                  padding-top: 0.5rem;
+            }
+      }
+
+      &__address {
+            width: 55%;
+            margin-top: 5rem;
+
+            @media only screen and (max-width: 500px) {
+                  margin-top: 8rem;
+                  width: 55%;
+            }
+      }
+
+      &__details {
+            display: flex;
+            justify-content: space-between;
+      }
+}
+
+///////////CLOSE
+
+.close-btn {
+      font-family: $font-secondary;
+      font-weight: 600;
+      font-size: 5rem;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: transparent;
+}
+
+.close-btn:active {
+      transform: translateY(2px);
+}
+
+//////////address input
+
+.address-wrapper {
+      input {
+            font-family: $font-primary;
+            padding: 1.7rem 1rem;
+            font-size: 2.2rem;
+            background: rgba(#000, 0.2);
+            border: none;
+            font-weight: 300;
+            color: rgba(white, 0.5);
+            border-radius: 0.5rem;
+            width: 72%;
+            margin-right: -1rem;
+
+            @media only screen and (max-width: 500px) {
+                  width:67%;
+                  padding: 1.2rem 1rem;
+            }
+
+            &::placeholder {
+                  font-weight: 200;
+                  color: rgba(#fff, 0.5);
+            }
+      }
+      input:focus {
+            outline: none;
+      }
+      button {
+            font-family: $font-primary;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: white;
+            background-color: $color-text-light;
+            border: none;
+            outline: none;
+            padding: 1.7rem 1.8rem;
+            letter-spacing: 1.4;
+            border-radius: 0.5rem;
+            cursor: pointer;
+
+            @media only screen and (max-width: 500px) {
+                  padding: 1.2rem 1rem;
+            }
+      }
+}
+
+//////////quantity field
+
+.quantity-field {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: auto;
+      width: 20rem;
+      margin: 0 auto;
+      color: white;
+      margin-bottom: 0rem;
+      margin-top: -9rem;
+
+      @media only screen and (max-width: 500px) {
+            margin-top: -2rem;
+            margin-bottom: -5rem;
+            width: 15rem;
+            position: relative;
+            z-index: 3;
+      }
+}
+
+.quantity-field .value-button {
+      border: none;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      outline: none;
+      cursor: pointer;
+      
+}
+
+.quantity-field .value-button:hover {
+      background: transparent;
+}
+
+.quantity-field .value-button:active {
+      background: transparent;
+}
+
+.quantity-field .decrease-button {
+      font-size: 4.8rem;
+      font-family: $font-secondary;
+      font-weight: 600;
+      color: white;
+
+      
+}
+
+.quantity-field .increase-button {
+      font-size: 4.8rem;
+      font-family: $font-secondary;
+      font-weight: 600;
+      color: white;
+}
+
+.quantity-field .number {
+      display: inline-block;
+      text-align: center;
+      border: none;
+      line-height: 1;
+      font-size: 9rem;
+      box-sizing: border-box;
+      background: transparent;
+      font-family: $font-primary;
+      font-weight: 600;
+}
+
+.quantity-field .number::selection {
+      background: none;
+}
+
+///////////buy button
+
+.buy-button-popup {
+      padding: 6rem 12rem;
+      font-size: 4.8rem;
+      font-weight: 600;
+      font-family: $font-secondary;
+      color: $color-text;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: transparent;
+      position: relative;
+      margin-bottom: -3rem;
+
+      @media only screen and (max-width: 500px) {
+            padding: 2rem 12rem;
+            margin-top: 6rem;
+      }
+
+      &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-image: url(../img/short-bone.svg);
+            background-position: center;
+            z-index: -4;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @media only screen and (max-width: 500px) {
+                  background-size: 70%; 
+            }
+      }
+}
